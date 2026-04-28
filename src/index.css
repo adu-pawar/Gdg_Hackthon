@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 transition-colors duration-200;
+  }
+  
+  .dark body {
+    @apply bg-bg-dark text-slate-100;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-primary text-white rounded-lg hover:bg-sky-600 transition-colors font-medium;
+  }
+  .btn-secondary {
+    @apply px-4 py-2 bg-slate-200 text-slate-800 dark:bg-surface-dark dark:text-slate-200 rounded-lg hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors font-medium;
+  }
+  .card {
+    @apply bg-white dark:bg-surface-dark rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  .glass-card {
+    @apply bg-white/80 dark:bg-surface-dark/80 backdrop-blur-md border border-white/20 dark:border-slate-700/50 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl;
+  }
+  .input-field {
+    @apply w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all dark:text-white;
+  }
+  .btn-primary:active, .btn-secondary:active {
+    @apply scale-95;
+  }
+  tr.hover-row {
+     @apply transition-colors duration-200 hover:bg-slate-50 dark:hover:bg-slate-800/50;
+  }
+}
